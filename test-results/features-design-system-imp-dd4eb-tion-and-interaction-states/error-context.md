@@ -1,7 +1,7 @@
 # Test info
 
-- Name: Design System Visual Regression >> should visually match the baseline for typography and layout on desktop
-- Location: C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.cjs:20:9
+- Name: Design System Visual Regression >> should visually match the baseline for motion and interaction states
+- Location: C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.cjs:45:7
 
 # Error details
 
@@ -10,12 +10,12 @@ Error: expect(page).toHaveScreenshot(expected)
 
   2099 pixels (ratio 0.01 of all image pixels) are different.
 
-Expected: C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.cjs-snapshots\homepage-typography-layout-desktop-win32.png
-Received: C:\Projects\Raw Alpha v2\static-site\test-results\features-design-system-imp-51b60-raphy-and-layout-on-desktop\homepage-typography-layout-desktop-actual.png
-    Diff: C:\Projects\Raw Alpha v2\static-site\test-results\features-design-system-imp-51b60-raphy-and-layout-on-desktop\homepage-typography-layout-desktop-diff.png
+Expected: C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.cjs-snapshots\homepage-input-focus-state-win32.png
+Received: C:\Projects\Raw Alpha v2\static-site\test-results\features-design-system-imp-dd4eb-tion-and-interaction-states\homepage-input-focus-state-actual.png
+    Diff: C:\Projects\Raw Alpha v2\static-site\test-results\features-design-system-imp-dd4eb-tion-and-interaction-states\homepage-input-focus-state-diff.png
 
 Call log:
-  - expect.toHaveScreenshot(homepage-typography-layout-desktop.png) with timeout 5000ms
+  - expect.toHaveScreenshot(homepage-input-focus-state.png) with timeout 5000ms
     - verifying given screenshot expectation
   - taking page screenshot
     - disabled all CSS animations
@@ -30,7 +30,7 @@ Call log:
   - captured a stable screenshot
   - 2099 pixels (ratio 0.01 of all image pixels) are different.
 
-    at C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.cjs:24:26
+    at C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.cjs:64:26
 ```
 
 # Page snapshot
@@ -120,8 +120,7 @@ Call log:
   21 |       await page.setViewportSize({ width: viewport.width, height: viewport.height });
   22 |       await page.goto('/index.html');
   23 |       await page.waitForLoadState('networkidle');
-> 24 |       await expect(page).toHaveScreenshot(`homepage-typography-layout-${viewport.name}.png`, { fullPage: true });
-     |                          ^ Error: expect(page).toHaveScreenshot(expected)
+  24 |       await expect(page).toHaveScreenshot(`homepage-typography-layout-${viewport.name}.png`, { fullPage: true });
   25 |     });
   26 |   }
   27 |
@@ -161,7 +160,8 @@ Call log:
   61 |     const inputField = page.locator('input[type="text"]'); // Adjust selector as needed
   62 |     if (await inputField.isVisible()) {
   63 |       await inputField.focus();
-  64 |       await expect(page).toHaveScreenshot('homepage-input-focus-state.png', { fullPage: true });
+> 64 |       await expect(page).toHaveScreenshot('homepage-input-focus-state.png', { fullPage: true });
+     |                          ^ Error: expect(page).toHaveScreenshot(expected)
   65 |     } else {
   66 |       console.warn('Input field not found for focus state test.');
   67 |     }

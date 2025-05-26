@@ -1,16 +1,16 @@
 # Test info
 
 - Name: Design System Visual Regression >> should visually match the baseline for iconography
-- Location: C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.js:37:3
+- Location: C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.cjs:37:7
 
 # Error details
 
 ```
 Error: expect(page).toHaveScreenshot(expected)
 
-  Expected an image 1280px by 720px, received 1280px by 3353px. 4160456 pixels (ratio 0.97 of all image pixels) are different.
+  2099 pixels (ratio 0.01 of all image pixels) are different.
 
-Expected: C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.js-snapshots\homepage-iconography-win32.png
+Expected: C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.cjs-snapshots\homepage-iconography-win32.png
 Received: C:\Projects\Raw Alpha v2\static-site\test-results\features-design-system-imp-4df43-he-baseline-for-iconography\homepage-iconography-actual.png
     Diff: C:\Projects\Raw Alpha v2\static-site\test-results\features-design-system-imp-4df43-he-baseline-for-iconography\homepage-iconography-diff.png
 
@@ -21,16 +21,16 @@ Call log:
     - disabled all CSS animations
   - waiting for fonts to load...
   - fonts loaded
-  - Expected an image 1280px by 720px, received 1280px by 3353px. 4160456 pixels (ratio 0.97 of all image pixels) are different.
+  - 2099 pixels (ratio 0.01 of all image pixels) are different.
   - waiting 100ms before taking screenshot
   - taking page screenshot
     - disabled all CSS animations
   - waiting for fonts to load...
   - fonts loaded
   - captured a stable screenshot
-  - Expected an image 1280px by 720px, received 1280px by 3353px. 4160456 pixels (ratio 0.97 of all image pixels) are different.
+  - 2099 pixels (ratio 0.01 of all image pixels) are different.
 
-    at C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.js:41:24
+    at C:\Projects\Raw Alpha v2\static-site\tests\features\design-system-implementation\visual-regression.spec.cjs:41:24
 ```
 
 # Page snapshot
