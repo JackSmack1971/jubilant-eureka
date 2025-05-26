@@ -1,0 +1,57 @@
+/* About Us Page Specific Styling */
+#about-us,
+#history,
+#mission,
+#team {
+  padding: var(--space-5xl) var(--space-xl);
+  text-align: center;
+  background-color: var(--brand-midnight);
+  color: var(--silver-stream);
+}
+
+#about-us h1,
+#history h2,
+#mission h2,
+#team h2 {
+  font-size: var(--text-section);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-3xl);
+  color: var(--crystal-white);
+}
+
+.team-member {
+  background: var(--gradient-subtle);
+  border-radius: 1rem;
+  padding: var(--space-xl);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 30%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  margin-bottom: var(--space-2xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.team-member h3 {
+  font-size: var(--text-card);
+  font-weight: 600;
+  color: var(--quantum-blue);
+  margin-bottom: var(--space-sm);
+}
+
+.team-member p {
+  font-size: var(--text-body);
+  color: var(--silver-stream);
+}
+
+#about-us p,
+#history p,
+#mission p {
+  font-size: var(--text-body);
+  margin-bottom: var(--space-lg);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}

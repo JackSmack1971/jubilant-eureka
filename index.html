@@ -4,70 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raw Alpha - Innovative Solutions</title>
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body class="dark-theme">
-    <header class="hero">
-        <div class="container">
-            <img src="../../docs/assets/RAW ALPHA LOGO.png" alt="Raw Alpha Logo" class="hero-logo">
-            <h1>Unlock Your Potential with Raw Alpha</h1>
-            <p>Innovative solutions for a smarter future.</p>
-            <a href="#learn-more" class="btn">Learn More</a>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="#" class="logo-link">
+                <picture>
+                    <source srcset="assets/RAW ALPHA LOGO.webp, assets/RAW ALPHA LOGO-small.webp 1x" type="image/webp">
+                    <img src="assets/RAW ALPHA LOGO.png" alt="Raw Alpha Logo" class="site-logo" loading="lazy">
+                </picture>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#learn-more" class="nav-link">Learn More</a></li>
+                    <li><a href="#future-products-showcase" class="nav-link">Products</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" aria-controls="main-nav" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <div class="hamburger"></div>
+            </button>
+        </div>
+        <div class="hero">
+            <div class="container">
+                <h1>Unlock Your Potential with Raw Alpha</h1>
+                <p>Innovative solutions for a smarter future.</p>
+                <div class="hero-actions">
+                    <a href="#learn-more" class="btn btn-primary">Learn More</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
-        <section id="learn-more" class="content-section">
+        <section id="learn-more" class="content-section section-padding">
             <h2>Learn More About Raw Alpha</h2>
             <p>Raw Alpha is dedicated to providing cutting-edge solutions that empower businesses and individuals to achieve their full potential. Our innovative approach combines advanced technology with user-centric design to deliver seamless and impactful experiences.</p>
             <p>Discover how our services can transform your operations and drive future growth. We focus on creating sustainable and scalable solutions tailored to your unique needs.</p>
         </section>
         <!-- Other sections will go here -->
+
+        <section id="future-products-showcase" class="content-section section-padding">
+            <div class="container">
+                <h2>Future Products Showcase</h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="assets/RAW ALPHA LOGO.webp" type="image/webp">
+                            <img src="assets/RAW ALPHA LOGO.png" alt="Product 1: Blockchain Service Alpha" loading="lazy">
+                        </picture>
+                        <h3>Product 1: Blockchain Service Alpha</h3>
+                        <p>A revolutionary new blockchain service designed to enhance transparency and security in digital transactions.</p>
+                    </div>
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="assets/RAW ALPHA WHITE.webp" type="image/webp">
+                            <img src="assets/RAW ALPHA WHITE.png" alt="Product 2: Decentralized Finance Beta" loading="lazy">
+                        </picture>
+                        <h3>Product 2: Decentralized Finance Beta</h3>
+                        <p>Next-gen DeFi solutions offering unparalleled financial freedom and accessibility.</p>
+                    </div>
+                    <div class="product-item">
+                        <picture>
+                            <source srcset="assets/RAW ALPHA 2.webp" type="image/webp">
+                            <img src="assets/RAW ALPHA 2.png" alt="Product 3: AI-Powered Smart Contracts" loading="lazy">
+                        </picture>
+                        <h3>Product 3: AI-Powered Smart Contracts</h3>
+                        <p>Intelligent contracts that automate agreements with enhanced efficiency and reduced risk.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section section-padding">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="social-media">
+                    <a href="https://facebook.com/rawalpha" class="social-icon">Facebook</a>
+                    <a href="https://twitter.com/rawalpha" class="social-icon">Twitter</a>
+                    <a href="https://linkedin.com/company/rawalpha" class="social-icon">LinkedIn</a>
+                    <a href="https://instagram.com/rawalpha" class="social-icon">Instagram</a>
+                    <a href="https://github.com/rawalpha" class="social-icon">GitHub</a>
+                </div>
+                <div class="form-placeholder">
+                    <input type="text" placeholder="Name (Coming Soon)" disabled>
+                    <input type="email" placeholder="Email (Coming Soon)" disabled>
+                    <textarea placeholder="Message (Coming Soon)" disabled></textarea>
+                    <button type="submit" class="btn btn-primary" disabled>Send Message</button>
+                    <p>Our contact form is coming soon!</p>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <section id="future-products-showcase" class="content-section">
-        <div class="container">
-            <h2>Future Products Showcase</h2>
-            <div class="product-grid">
-                <div class="product-item">
-                    <img src="../../docs/assets/RAW ALPHA LOGO.png" alt="Product 1: Blockchain Service Alpha">
-                    <h3>Product 1: Blockchain Service Alpha</h3>
-                    <p>A revolutionary new blockchain service designed to enhance transparency and security in digital transactions.</p>
-                </div>
-                <div class="product-item">
-                    <img src="../../docs/assets/RAW ALPHA WHITE.png" alt="Product 2: Decentralized Finance Beta">
-                    <h3>Product 2: Decentralized Finance Beta</h3>
-                    <p>Next-gen DeFi solutions offering unparalleled financial freedom and accessibility.</p>
-                </div>
-                <div class="product-item">
-                    <img src="../../docs/assets/RAW ALPHA 2.png" alt="Product 3: AI-Powered Smart Contracts">
-                    <h3>Product 3: AI-Powered Smart Contracts</h3>
-                    <p>Intelligent contracts that automate agreements with enhanced efficiency and reduced risk.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="content-section" role="main">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="social-media">
-                <a href="https://facebook.com/rawalpha" class="social-icon">Facebook</a>
-                <a href="https://twitter.com/rawalpha" class="social-icon">Twitter</a>
-                <a href="https://linkedin.com/company/rawalpha" class="social-icon">LinkedIn</a>
-                <a href="https://instagram.com/rawalpha" class="social-icon">Instagram</a>
-                <a href="https://github.com/rawalpha" class="social-icon">GitHub</a>
-            </div>
-            <div class="form-placeholder">
-                <input type="text" placeholder="Name (Coming Soon)" disabled>
-                <input type="email" placeholder="Email (Coming Soon)" disabled>
-                <textarea placeholder="Message (Coming Soon)" disabled></textarea>
-                <button type="submit" disabled>Send Message</button>
-                <p>Our contact form is coming soon!</p>
-            </div>
-        </div>
-    </section>
 
     <footer>
         <div class="container">
@@ -75,6 +108,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
 </html>

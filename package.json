@@ -9,13 +9,19 @@
     "lint:css": "stylelint \"**/*.css\"",
     "lint:js": "eslint \"**/*.js\"",
     "lint:js:fix": "eslint \"**/*.js\" --fix",
-    "test": "npm run lint:html && npm run lint:css && npm run lint:js && jest"
+    "test": "npm run lint:html && npm run lint:css && npm run lint:js && jest",
+    "test:playwright": "playwright test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@axe-core/playwright": "^4.9.1",
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.2",
+    "@playwright/test": "^1.44.1",
     "axe-core": "^4.4.1",
+    "babel-jest": "^29.7.0",
     "broken-link-checker": "^0.7.8",
     "eslint": "^8.0.0",
     "eslint-config-standard": "^17.0.0",
@@ -27,10 +33,12 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-fetch-mock": "^3.0.3",
     "jsdom": "^19.0.0",
+    "serve": "^14.2.1",
     "stylelint": "^14.0.0",
     "stylelint-config-standard": "^23.0.0"
   },
   "dependencies": {
+    "@testing-library/dom": "^9.3.0",
     "@testing-library/jest-dom": "^6.6.3",
     "jest-axe": "^10.0.0"
   }

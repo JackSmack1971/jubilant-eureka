@@ -1,0 +1,424 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap");
+
+/* Basic Reset & Body Styles */
+body {
+  margin: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-bg-color);
+  font-family: var(--font-family-inter);
+  padding: var(--space-md); /* Apply base padding to body */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) 0; /* Update padding to use spacing variable */
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--primary-bg-color);
+  text-align: center;
+  padding: var(--space-5xl) 0; /* Update padding to use spacing variable */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-logo {
+  max-width: 150px;
+  margin-bottom: var(--space-xl); /* Update margin-bottom to use spacing variable */
+}
+
+.hero h1 {
+  font-size: var(--text-hero);
+  margin-bottom: var(--space-md); /* Update margin-bottom to use spacing variable */
+  color: var(--primary-text-color);
+}
+
+.hero p {
+  font-size: var(--text-body-large);
+  margin-bottom: var(--space-lg); /* Update margin-bottom to use spacing variable */
+  color: var(--secondary-text-color);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
+  padding: var(--space-md) var(--space-lg); /* Update padding to use spacing variables */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all var(--transition-speed-normal) var(--transition-timing-cubic-bezier);
+  font-size: var(--text-body-regular);
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: var(--crystal-white);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgb(0 212 255 / 30%);
+  transition: all var(--transition-speed-normal) var(--transition-timing-cubic-bezier);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgb(0 212 255 / 40%);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--quantum-blue);
+  color: var(--quantum-blue);
+  transition: all var(--transition-speed-normal) var(--transition-timing-ease);
+}
+
+.btn-secondary:hover {
+  background-color: rgb(0 212 255 / 10%);
+  box-shadow: 0 4px 15px rgb(0 212 255 / 20%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Adjustments for laptop screens */
+  .hero h1 {
+    font-size: var(--text-section-heading);
+  }
+
+  .hero p {
+    font-size: var(--text-body-regular);
+  }
+}
+
+@media (max-width: 320px) {
+  /* Adjustments for small mobile screens */
+  .hero h1 {
+    font-size: var(--text-body-large);
+  }
+
+  .hero p {
+    font-size: var(--text-caption);
+  }
+
+  .btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-caption);
+  }
+}
+
+/* Content Section - General Styling */
+.content-section {
+  padding: var(--space-4xl) 0; /* Update padding to use spacing variable */
+  text-align: center;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  font-size: var(--text-body-regular);
+}
+
+.content-section h2 {
+  font-size: var(--text-section-heading);
+  margin-bottom: var(--space-3xl); /* Update margin-bottom to use spacing variable */
+  color: var(--heading-color);
+}
+
+/* Future Products Showcase Specific Styling */
+#future-products-showcase .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-2xl); /* Update gap to use spacing variable */
+  margin-top: var(--space-3xl); /* Update margin-top to use spacing variable */
+}
+
+#future-products-showcase .product-item {
+  background-color: var(--secondary-bg-color);
+  padding: var(--space-2xl); /* Update padding to use spacing variable */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 20%); /* Refine box-shadow */
+  border: 1px solid var(--ghost-gray); /* Add border */
+  transition:
+    transform var(--transition-speed-normal) var(--transition-timing-ease),
+    box-shadow var(--transition-speed-normal) var(--transition-timing-ease),
+    border-color var(--transition-speed-normal) var(--transition-timing-ease);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#future-products-showcase .product-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgb(0 212 255 / 40%);
+}
+
+#future-products-showcase .product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: var(--space-xl); /* Update margin-bottom to use spacing variable */
+  max-height: 150px; /* Limit image height */
+  object-fit: contain; /* Ensure image fits within bounds without cropping */
+}
+
+#future-products-showcase .product-item h3 {
+  font-size: var(--text-card-title);
+  margin-bottom: var(--space-md); /* Update margin-bottom to use spacing variable */
+  color: var(--heading-color);
+}
+
+/* Responsive Adjustments for Future Products Showcase */
+@media (max-width: 768px) {
+  #future-products-showcase .product-grid {
+    grid-template-columns: 1fr; /* Stack items on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .content-section {
+    padding: 40px 0;
+  }
+
+  .content-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+
+  #future-products-showcase .product-item {
+    padding: 20px;
+  }
+
+  #future-products-showcase .product-item h3 {
+    font-size: 1.5em;
+  }
+}
+
+/* Contact Section Styling */
+#contact {
+  padding: var(--space-5xl) 0; /* Update padding to use spacing variable */
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: var(--text-section-heading);
+  margin-bottom: var(--space-4xl); /* Update margin-bottom to use spacing variable */
+  color: var(--heading-color);
+}
+
+/* Social Media Icons */
+.social-media {
+  margin-bottom: var(--space-3xl); /* Update margin-bottom to use spacing variable */
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl); /* Update gap to use spacing variable */
+}
+
+.social-icon {
+  font-size: var(--space-lg); /* 24px base size for icons */
+  color: var(--accent-color); /* Use accent color for interactive icons */
+  transition:
+    transform var(--transition-speed-normal) var(--transition-timing-ease),
+    color var(--transition-speed-normal) var(--transition-timing-ease);
+  text-decoration: none; /* Remove underline from links */
+
+  /* Assuming SVG icons for stroke properties */
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  padding: var(--space-sm); /* Increase touch target */
+  min-width: 44px; /* Ensure 44px touch target */
+  min-height: 44px; /* Ensure 44px touch target */
+  display: inline-flex; /* Enable centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  color: var(--secondary-text-color); /* Slightly change color on hover */
+}
+
+/* Form Placeholder Styling */
+.form-placeholder {
+  background-color: var(--secondary-bg-color);
+  padding: var(--space-3xl); /* Update padding to use spacing variable */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl); /* Update gap to use spacing variable */
+}
+
+.form-placeholder input[type="text"],
+.form-placeholder input[type="email"],
+.form-placeholder textarea {
+  width: calc(100% - 20px); /* Account for padding */
+  padding: var(--space-md); /* Update padding to use spacing variable */
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--secondary-bg-color); /* Refine background-color */
+  color: var(--primary-text-color);
+  font-size: var(--text-body-regular);
+  transition:
+    border-color var(--transition-speed-normal) var(--transition-timing-ease),
+    background-color var(--transition-speed-normal) var(--transition-timing-ease),
+    box-shadow var(--transition-speed-normal) var(--transition-timing-ease);
+}
+
+.form-placeholder textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 120px;
+}
+
+.form-placeholder input[type="text"]:focus,
+.form-placeholder input[type="email"]:focus,
+.form-placeholder textarea:focus {
+  border-color: var(--quantum-blue); /* Use quantum-blue */
+  box-shadow: 0 0 0 3px rgb(0 212 255 / 10%); /* Add box-shadow */
+  background-color: rgb(255 255 255 / 8%); /* Add background-color */
+  outline: 2px solid var(--quantum-blue);
+  outline-offset: 2px;
+}
+
+.form-placeholder input[disabled],
+.form-placeholder textarea[disabled] {
+  background-color: var(--ghost-gray);
+  color: var(--silver-stream);
+  cursor: not-allowed;
+  opacity: 60%;
+}
+
+.form-placeholder button[type="submit"] {
+  background-color: var(--disabled-button-bg); /* Use a distinct color for disabled button */
+  color: var(--disabled-button-text);
+  padding: var(--space-md) var(--space-xl); /* Update padding to use spacing variables */
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em; /* Keep as is for now, will be updated with component library */
+  cursor: not-allowed; /* Indicate it's not clickable */
+  opacity: 70%;
+}
+
+.btn:disabled {
+  background-color: var(--disabled-button-bg);
+  color: var(--disabled-button-text);
+  cursor: not-allowed;
+  opacity: 60%;
+}
+
+.form-placeholder p {
+  font-size: var(--text-body-regular);
+  color: var(--secondary-text-color);
+  margin-top: var(--space-lg); /* Update margin-top to use spacing variable */
+}
+
+#future-products-showcase .product-item p {
+  font-size: var(--text-body-regular);
+  color: var(--secondary-text-color);
+}
+
+/* Responsive Adjustments for Contact Section */
+@media (max-width: 768px) {
+  #future-products-showcase .product-item p {
+    font-size: var(--text-body-regular);
+    color: var(--secondary-text-color);
+  }
+
+  #contact {
+    padding: var(--space-4xl) 0;
+  }
+
+  #contact h2 {
+    font-size: var(--text-section-heading);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .social-media {
+    gap: var(--space-lg);
+  }
+
+  .social-icon {
+    font-size: var(--text-body-large);
+  }
+
+  .form-placeholder {
+    padding: var(--space-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .content-section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .content-section h2 {
+    font-size: var(--text-section-heading);
+    margin-bottom: var(--space-2xl);
+  }
+
+  #future-products-showcase .product-item {
+    padding: var(--space-xl);
+  }
+
+  #future-products-showcase .product-item h3 {
+    font-size: var(--text-body-large);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
+  #contact {
+    padding: var(--space-3xl) 0;
+  }
+
+  #contact h2 {
+    font-size: var(--text-body-large);
+    margin-bottom: var(--space-lg);
+  }
+
+  .social-media {
+    flex-direction: column; /* Stack icons on very small screens */
+    gap: var(--space-md);
+  }
+
+  .social-icon {
+    font-size: var(--text-body-large);
+  }
+
+  .form-placeholder {
+    padding: var(--space-xl);
+  }
+}
