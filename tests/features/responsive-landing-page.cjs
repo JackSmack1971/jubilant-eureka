@@ -129,10 +129,10 @@ describe('Responsive Landing Page Responsiveness (TC-RSP-005, TC-RSP-011)', () =
 
     test('TC-RSP-011: CSS should contain media queries for responsiveness', () => {
         const styleCssContent = fs.readFileSync(path.resolve(__dirname, '../../css/style.css'), 'utf8');
-        expect(styleCssContent).toContain('@media (max-width: 1024px)');
-        expect(styleCssContent).toContain('@media (max-width: 768px)');
-        expect(styleCssContent).toContain('@media (max-width: 480px)');
-        expect(styleCssContent).toContain('@media (max-width: 320px)');
+        expect(styleCssContent).toContain('@media (max-width: 767px)');
+        expect(styleCssContent).toContain('@media (min-width: 768px) and (max-width: 1023px)');
+        expect(styleCssContent).toContain('@media (min-width: 1024px) and (max-width: 1399px)');
+        expect(styleCssContent).toContain('@media (min-width: 1400px)');
     });
 });
 
@@ -174,14 +174,14 @@ describe('Responsive Landing Page Functional Tests', () => {
 */
 
     test('TC-RSP-007: Verify all brand assets are sourced from ./docs/assets/', () => {
-        const heroLogo = global.document.querySelector('.hero-logo');
-        expect(heroLogo).not.toBeNull();
+        const siteLogo = global.document.querySelector('.site-logo');
+        expect(siteLogo).not.toBeNull();
         // This test assumes the asset path in HTML is relative to the static-site directory.
         // The requirement states `./docs/assets/`, which is relative to the project root.
         // The HTML uses `assets/RAW ALPHA LOGO.png` which is relative to `static-site/`.
         // This needs clarification or adjustment in the HTML/CSS.
         // For now, we'll check the relative path as it appears in the HTML.
-        expect(heroLogo.src).toContain('assets/RAW%20ALPHA%20LOGO.png');
+        expect(siteLogo.src).toContain('assets/RAW%20ALPHA%20LOGO.png');
     });
 
     test('TC-RSP-008: Verify the CSS is structured with theme.css for dark theme variables and style.css for layout/typography', () => {
@@ -189,12 +189,13 @@ describe('Responsive Landing Page Functional Tests', () => {
         const styleCssContent = fs.readFileSync(path.resolve(__dirname, '../../css/style.css'), 'utf8');
 
         expect(themeCssContent).toContain(':root {');
-        expect(themeCssContent).toContain('--primary-bg-color: #1a1a1a;');
-        expect(themeCssContent).toContain('--accent-color: #007bff;');
+        expect(themeCssContent).toContain('--brand-midnight: #0a0a0f;');
+        expect(themeCssContent).toContain('--quantum-blue: #00d4ff;');
+        expect(themeCssContent).toContain('--neon-purple: #8b5cf6;');
 
         expect(styleCssContent).toContain('.hero {');
-        expect(styleCssContent).toContain('@media (max-width: 768px) {');
-        expect(styleCssContent).toContain('@media (max-width: 480px) {');
+        expect(styleCssContent).toContain('@media (max-width: 767px) {');
+        expect(styleCssContent).toContain('@media (min-width: 768px) and (max-width: 1023px) {');
     });
 
     test('TC-RSP-010: Verify the page does NOT use any front-end frameworks', () => {

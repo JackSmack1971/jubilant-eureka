@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        img-src 'self' data:;
+        style-src 'self';
+        script-src 'self';
+        font-src 'self';
+        connect-src 'self';
+        object-src 'none';
+        frame-ancestors 'none';
+        base-uri 'self';
+        form-action 'self';
+    ">
     <title>Raw Alpha - Innovative Solutions</title>
     <link rel="stylesheet" href="css/theme.min.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -85,11 +97,11 @@
             <div class="container">
                 <h2>Contact Us</h2>
                 <div class="social-media">
-                    <a href="https://facebook.com/rawalpha" class="social-icon">Facebook</a>
-                    <a href="https://twitter.com/rawalpha" class="social-icon">Twitter</a>
-                    <a href="https://linkedin.com/company/rawalpha" class="social-icon">LinkedIn</a>
-                    <a href="https://instagram.com/rawalpha" class="social-icon">Instagram</a>
-                    <a href="https://github.com/rawalpha" class="social-icon">GitHub</a>
+                    <a href="https://facebook.com/rawalpha" class="social-icon" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://twitter.com/rawalpha" class="social-icon" rel="noopener noreferrer">Twitter</a>
+                    <a href="https://linkedin.com/company/rawalpha" class="social-icon" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://instagram.com/rawalpha" class="social-icon" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://github.com/rawalpha" class="social-icon" rel="noopener noreferrer">GitHub</a>
                 </div>
                 <div class="form-placeholder">
                     <input type="text" placeholder="Name (Coming Soon)" disabled>
